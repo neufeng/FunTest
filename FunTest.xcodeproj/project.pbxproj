@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B07D30F51950272400D0F40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F41950272400D0F40B /* Foundation.framework */; };
+		B07D30F71950272400D0F40B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F61950272400D0F40B /* CoreGraphics.framework */; };
+		B07D30F91950272400D0F40B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F81950272400D0F40B /* UIKit.framework */; };
+		B07D30FF1950272400D0F40B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B07D30FD1950272400D0F40B /* InfoPlist.strings */; };
+		B07D31011950272500D0F40B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B07D31001950272500D0F40B /* main.m */; };
+		B07D31051950272500D0F40B /* TXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07D31041950272500D0F40B /* TXAppDelegate.m */; };
+		B07D31081950272500D0F40B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07D31061950272500D0F40B /* Main_iPhone.storyboard */; };
+		B07D310B1950272500D0F40B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07D31091950272500D0F40B /* Main_iPad.storyboard */; };
+		B07D310E1950272500D0F40B /* TXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07D310D1950272500D0F40B /* TXViewController.m */; };
+		B07D31101950272500D0F40B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07D310F1950272500D0F40B /* Images.xcassets */; };
+		B07D31171950272500D0F40B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D31161950272500D0F40B /* XCTest.framework */; };
+		B07D31181950272500D0F40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F41950272400D0F40B /* Foundation.framework */; };
+		B07D31191950272500D0F40B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F81950272400D0F40B /* UIKit.framework */; };
+		B07D31211950272500D0F40B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B07D311F1950272500D0F40B /* InfoPlist.strings */; };
+		B07D31231950272500D0F40B /* FunTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B07D31221950272500D0F40B /* FunTestTests.m */; };
+		B07D312E1950276000D0F40B /* TXMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = B07D312D1950276000D0F40B /* TXMaskView.m */; };
+		B0936E3A1959212C0081321E /* TXAMRPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0936E391959212C0081321E /* TXAMRPlayer.mm */; };
+		B0936E3C195921450081321E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936E3B195921450081321E /* AudioToolbox.framework */; };
+		B0936E441959224E0081321E /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936E421959224E0081321E /* libopencore-amrnb.a */; };
+		B0936E451959224E0081321E /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936E431959224E0081321E /* libopencore-amrwb.a */; };
+		B0936E481959239D0081321E /* TXAMRRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0936E471959239D0081321E /* TXAMRRecorder.mm */; };
+		B0944C53195BBAEF003AD6B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0944C52195BBAEF003AD6B7 /* AVFoundation.framework */; };
+		B0944C6C195BBC96003AD6B7 /* AAFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C55195BBC96003AD6B7 /* AAFilter.cpp */; };
+		B0944C6D195BBC96003AD6B7 /* BPMDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C57195BBC96003AD6B7 /* BPMDetect.cpp */; };
+		B0944C6E195BBC96003AD6B7 /* cpu_detect_x86.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C59195BBC96003AD6B7 /* cpu_detect_x86.cpp */; };
+		B0944C6F195BBC96003AD6B7 /* FIFOSampleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C5A195BBC96003AD6B7 /* FIFOSampleBuffer.cpp */; };
+		B0944C70195BBC96003AD6B7 /* FIRFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C5B195BBC96003AD6B7 /* FIRFilter.cpp */; };
+		B0944C71195BBC96003AD6B7 /* InterpolateCubic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C5D195BBC96003AD6B7 /* InterpolateCubic.cpp */; };
+		B0944C72195BBC96003AD6B7 /* InterpolateLinear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C5F195BBC96003AD6B7 /* InterpolateLinear.cpp */; };
+		B0944C73195BBC96003AD6B7 /* InterpolateShannon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C61195BBC96003AD6B7 /* InterpolateShannon.cpp */; };
+		B0944C74195BBC96003AD6B7 /* mmx_optimized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C63195BBC96003AD6B7 /* mmx_optimized.cpp */; };
+		B0944C75195BBC96003AD6B7 /* PeakFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C64195BBC96003AD6B7 /* PeakFinder.cpp */; };
+		B0944C76195BBC96003AD6B7 /* RateTransposer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C66195BBC96003AD6B7 /* RateTransposer.cpp */; };
+		B0944C77195BBC96003AD6B7 /* SoundTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C68195BBC96003AD6B7 /* SoundTouch.cpp */; };
+		B0944C78195BBC96003AD6B7 /* sse_optimized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C69195BBC96003AD6B7 /* sse_optimized.cpp */; };
+		B0944C79195BBC96003AD6B7 /* TDStretch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0944C6A195BBC96003AD6B7 /* TDStretch.cpp */; };
+		B0944C82195BD161003AD6B7 /* TXImageFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0944C81195BD161003AD6B7 /* TXImageFilterViewController.m */; };
+		B0944C84195BD5EF003AD6B7 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = B0944C83195BD5EF003AD6B7 /* 0.png */; };
+		B0944C88195BD6B7003AD6B7 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B0944C87195BD6B7003AD6B7 /* ImageUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B07D311A1950272500D0F40B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B07D30E91950272400D0F40B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B07D30F01950272400D0F40B;
+			remoteInfo = FunTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B07D30F11950272400D0F40B /* FunTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07D30F41950272400D0F40B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B07D30F61950272400D0F40B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B07D30F81950272400D0F40B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B07D30FC1950272400D0F40B /* FunTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunTest-Info.plist"; sourceTree = "<group>"; };
+		B07D30FE1950272400D0F40B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B07D31001950272500D0F40B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B07D31021950272500D0F40B /* FunTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunTest-Prefix.pch"; sourceTree = "<group>"; };
+		B07D31031950272500D0F40B /* TXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXAppDelegate.h; sourceTree = "<group>"; };
+		B07D31041950272500D0F40B /* TXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXAppDelegate.m; sourceTree = "<group>"; };
+		B07D31071950272500D0F40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		B07D310A1950272500D0F40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		B07D310C1950272500D0F40B /* TXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXViewController.h; sourceTree = "<group>"; };
+		B07D310D1950272500D0F40B /* TXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXViewController.m; sourceTree = "<group>"; };
+		B07D310F1950272500D0F40B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B07D31151950272500D0F40B /* FunTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07D31161950272500D0F40B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B07D311E1950272500D0F40B /* FunTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunTestTests-Info.plist"; sourceTree = "<group>"; };
+		B07D31201950272500D0F40B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B07D31221950272500D0F40B /* FunTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunTestTests.m; sourceTree = "<group>"; };
+		B07D312C1950276000D0F40B /* TXMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXMaskView.h; sourceTree = "<group>"; };
+		B07D312D1950276000D0F40B /* TXMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXMaskView.m; sourceTree = "<group>"; };
+		B0936E381959212C0081321E /* TXAMRPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXAMRPlayer.h; sourceTree = "<group>"; };
+		B0936E391959212C0081321E /* TXAMRPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TXAMRPlayer.mm; sourceTree = "<group>"; };
+		B0936E3B195921450081321E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B0936E3E1959224E0081321E /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		B0936E3F1959224E0081321E /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		B0936E401959224E0081321E /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		B0936E411959224E0081321E /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		B0936E421959224E0081321E /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		B0936E431959224E0081321E /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		B0936E461959239D0081321E /* TXAMRRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXAMRRecorder.h; sourceTree = "<group>"; };
+		B0936E471959239D0081321E /* TXAMRRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TXAMRRecorder.mm; sourceTree = "<group>"; };
+		B0944C52195BBAEF003AD6B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B0944C55195BBC96003AD6B7 /* AAFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAFilter.cpp; sourceTree = "<group>"; };
+		B0944C56195BBC96003AD6B7 /* AAFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAFilter.h; sourceTree = "<group>"; };
+		B0944C57195BBC96003AD6B7 /* BPMDetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BPMDetect.cpp; sourceTree = "<group>"; };
+		B0944C58195BBC96003AD6B7 /* cpu_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_detect.h; sourceTree = "<group>"; };
+		B0944C59195BBC96003AD6B7 /* cpu_detect_x86.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpu_detect_x86.cpp; sourceTree = "<group>"; };
+		B0944C5A195BBC96003AD6B7 /* FIFOSampleBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIFOSampleBuffer.cpp; sourceTree = "<group>"; };
+		B0944C5B195BBC96003AD6B7 /* FIRFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIRFilter.cpp; sourceTree = "<group>"; };
+		B0944C5C195BBC96003AD6B7 /* FIRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRFilter.h; sourceTree = "<group>"; };
+		B0944C5D195BBC96003AD6B7 /* InterpolateCubic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpolateCubic.cpp; sourceTree = "<group>"; };
+		B0944C5E195BBC96003AD6B7 /* InterpolateCubic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolateCubic.h; sourceTree = "<group>"; };
+		B0944C5F195BBC96003AD6B7 /* InterpolateLinear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpolateLinear.cpp; sourceTree = "<group>"; };
+		B0944C60195BBC96003AD6B7 /* InterpolateLinear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolateLinear.h; sourceTree = "<group>"; };
+		B0944C61195BBC96003AD6B7 /* InterpolateShannon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpolateShannon.cpp; sourceTree = "<group>"; };
+		B0944C62195BBC96003AD6B7 /* InterpolateShannon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolateShannon.h; sourceTree = "<group>"; };
+		B0944C63195BBC96003AD6B7 /* mmx_optimized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mmx_optimized.cpp; sourceTree = "<group>"; };
+		B0944C64195BBC96003AD6B7 /* PeakFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PeakFinder.cpp; sourceTree = "<group>"; };
+		B0944C65195BBC96003AD6B7 /* PeakFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeakFinder.h; sourceTree = "<group>"; };
+		B0944C66195BBC96003AD6B7 /* RateTransposer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RateTransposer.cpp; sourceTree = "<group>"; };
+		B0944C67195BBC96003AD6B7 /* RateTransposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateTransposer.h; sourceTree = "<group>"; };
+		B0944C68195BBC96003AD6B7 /* SoundTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundTouch.cpp; sourceTree = "<group>"; };
+		B0944C69195BBC96003AD6B7 /* sse_optimized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sse_optimized.cpp; sourceTree = "<group>"; };
+		B0944C6A195BBC96003AD6B7 /* TDStretch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TDStretch.cpp; sourceTree = "<group>"; };
+		B0944C6B195BBC96003AD6B7 /* TDStretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStretch.h; sourceTree = "<group>"; };
+		B0944C7A195BBD20003AD6B7 /* BPMDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPMDetect.h; sourceTree = "<group>"; };
+		B0944C7B195BBD20003AD6B7 /* FIFOSampleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOSampleBuffer.h; sourceTree = "<group>"; };
+		B0944C7C195BBD20003AD6B7 /* FIFOSamplePipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOSamplePipe.h; sourceTree = "<group>"; };
+		B0944C7D195BBD20003AD6B7 /* SoundTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTouch.h; sourceTree = "<group>"; };
+		B0944C7E195BBD20003AD6B7 /* STTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTypes.h; sourceTree = "<group>"; };
+		B0944C7F195BC00E003AD6B7 /* soundtouch_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soundtouch_config.h; sourceTree = "<group>"; };
+		B0944C80195BD161003AD6B7 /* TXImageFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXImageFilterViewController.h; sourceTree = "<group>"; };
+		B0944C81195BD161003AD6B7 /* TXImageFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXImageFilterViewController.m; sourceTree = "<group>"; };
+		B0944C83195BD5EF003AD6B7 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		B0944C85195BD6B7003AD6B7 /* ColorMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
+		B0944C86195BD6B7003AD6B7 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
+		B0944C87195BD6B7003AD6B7 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B07D30EE1950272400D0F40B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0944C53195BBAEF003AD6B7 /* AVFoundation.framework in Frameworks */,
+				B0936E3C195921450081321E /* AudioToolbox.framework in Frameworks */,
+				B07D30F71950272400D0F40B /* CoreGraphics.framework in Frameworks */,
+				B07D30F91950272400D0F40B /* UIKit.framework in Frameworks */,
+				B0936E441959224E0081321E /* libopencore-amrnb.a in Frameworks */,
+				B0936E451959224E0081321E /* libopencore-amrwb.a in Frameworks */,
+				B07D30F51950272400D0F40B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07D31121950272500D0F40B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07D31171950272500D0F40B /* XCTest.framework in Frameworks */,
+				B07D31191950272500D0F40B /* UIKit.framework in Frameworks */,
+				B07D31181950272500D0F40B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B07D30E81950272400D0F40B = {
+			isa = PBXGroup;
+			children = (
+				B07D30FA1950272400D0F40B /* FunTest */,
+				B07D311C1950272500D0F40B /* FunTestTests */,
+				B07D30F31950272400D0F40B /* Frameworks */,
+				B07D30F21950272400D0F40B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B07D30F21950272400D0F40B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B07D30F11950272400D0F40B /* FunTest.app */,
+				B07D31151950272500D0F40B /* FunTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B07D30F31950272400D0F40B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0944C52195BBAEF003AD6B7 /* AVFoundation.framework */,
+				B0936E3B195921450081321E /* AudioToolbox.framework */,
+				B07D30F41950272400D0F40B /* Foundation.framework */,
+				B07D30F61950272400D0F40B /* CoreGraphics.framework */,
+				B07D30F81950272400D0F40B /* UIKit.framework */,
+				B07D31161950272500D0F40B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B07D30FA1950272400D0F40B /* FunTest */ = {
+			isa = PBXGroup;
+			children = (
+				B07D31031950272500D0F40B /* TXAppDelegate.h */,
+				B07D31041950272500D0F40B /* TXAppDelegate.m */,
+				B07D31061950272500D0F40B /* Main_iPhone.storyboard */,
+				B07D31091950272500D0F40B /* Main_iPad.storyboard */,
+				B07D310C1950272500D0F40B /* TXViewController.h */,
+				B07D310D1950272500D0F40B /* TXViewController.m */,
+				B0944C80195BD161003AD6B7 /* TXImageFilterViewController.h */,
+				B0944C81195BD161003AD6B7 /* TXImageFilterViewController.m */,
+				B0944C85195BD6B7003AD6B7 /* ColorMatrix.h */,
+				B0944C86195BD6B7003AD6B7 /* ImageUtil.h */,
+				B0944C87195BD6B7003AD6B7 /* ImageUtil.m */,
+				B07D312C1950276000D0F40B /* TXMaskView.h */,
+				B07D312D1950276000D0F40B /* TXMaskView.m */,
+				B0936E381959212C0081321E /* TXAMRPlayer.h */,
+				B0936E391959212C0081321E /* TXAMRPlayer.mm */,
+				B0936E461959239D0081321E /* TXAMRRecorder.h */,
+				B0936E471959239D0081321E /* TXAMRRecorder.mm */,
+				B0944C54195BBC96003AD6B7 /* SoundTouch */,
+				B0936E3D1959224E0081321E /* opencore */,
+				B07D310F1950272500D0F40B /* Images.xcassets */,
+				B07D30FB1950272400D0F40B /* Supporting Files */,
+			);
+			path = FunTest;
+			sourceTree = "<group>";
+		};
+		B07D30FB1950272400D0F40B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0944C83195BD5EF003AD6B7 /* 0.png */,
+				B07D30FC1950272400D0F40B /* FunTest-Info.plist */,
+				B07D30FD1950272400D0F40B /* InfoPlist.strings */,
+				B07D31001950272500D0F40B /* main.m */,
+				B07D31021950272500D0F40B /* FunTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B07D311C1950272500D0F40B /* FunTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B07D31221950272500D0F40B /* FunTestTests.m */,
+				B07D311D1950272500D0F40B /* Supporting Files */,
+			);
+			path = FunTestTests;
+			sourceTree = "<group>";
+		};
+		B07D311D1950272500D0F40B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B07D311E1950272500D0F40B /* FunTestTests-Info.plist */,
+				B07D311F1950272500D0F40B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0936E3D1959224E0081321E /* opencore */ = {
+			isa = PBXGroup;
+			children = (
+				B0936E3E1959224E0081321E /* dec_if.h */,
+				B0936E3F1959224E0081321E /* if_rom.h */,
+				B0936E401959224E0081321E /* interf_dec.h */,
+				B0936E411959224E0081321E /* interf_enc.h */,
+				B0936E421959224E0081321E /* libopencore-amrnb.a */,
+				B0936E431959224E0081321E /* libopencore-amrwb.a */,
+			);
+			path = opencore;
+			sourceTree = "<group>";
+		};
+		B0944C54195BBC96003AD6B7 /* SoundTouch */ = {
+			isa = PBXGroup;
+			children = (
+				B0944C7F195BC00E003AD6B7 /* soundtouch_config.h */,
+				B0944C55195BBC96003AD6B7 /* AAFilter.cpp */,
+				B0944C56195BBC96003AD6B7 /* AAFilter.h */,
+				B0944C57195BBC96003AD6B7 /* BPMDetect.cpp */,
+				B0944C7A195BBD20003AD6B7 /* BPMDetect.h */,
+				B0944C58195BBC96003AD6B7 /* cpu_detect.h */,
+				B0944C59195BBC96003AD6B7 /* cpu_detect_x86.cpp */,
+				B0944C5A195BBC96003AD6B7 /* FIFOSampleBuffer.cpp */,
+				B0944C7B195BBD20003AD6B7 /* FIFOSampleBuffer.h */,
+				B0944C7C195BBD20003AD6B7 /* FIFOSamplePipe.h */,
+				B0944C5B195BBC96003AD6B7 /* FIRFilter.cpp */,
+				B0944C5C195BBC96003AD6B7 /* FIRFilter.h */,
+				B0944C5D195BBC96003AD6B7 /* InterpolateCubic.cpp */,
+				B0944C5E195BBC96003AD6B7 /* InterpolateCubic.h */,
+				B0944C5F195BBC96003AD6B7 /* InterpolateLinear.cpp */,
+				B0944C60195BBC96003AD6B7 /* InterpolateLinear.h */,
+				B0944C61195BBC96003AD6B7 /* InterpolateShannon.cpp */,
+				B0944C62195BBC96003AD6B7 /* InterpolateShannon.h */,
+				B0944C63195BBC96003AD6B7 /* mmx_optimized.cpp */,
+				B0944C64195BBC96003AD6B7 /* PeakFinder.cpp */,
+				B0944C65195BBC96003AD6B7 /* PeakFinder.h */,
+				B0944C66195BBC96003AD6B7 /* RateTransposer.cpp */,
+				B0944C67195BBC96003AD6B7 /* RateTransposer.h */,
+				B0944C68195BBC96003AD6B7 /* SoundTouch.cpp */,
+				B0944C7D195BBD20003AD6B7 /* SoundTouch.h */,
+				B0944C69195BBC96003AD6B7 /* sse_optimized.cpp */,
+				B0944C7E195BBD20003AD6B7 /* STTypes.h */,
+				B0944C6A195BBC96003AD6B7 /* TDStretch.cpp */,
+				B0944C6B195BBC96003AD6B7 /* TDStretch.h */,
+			);
+			path = SoundTouch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B07D30F01950272400D0F40B /* FunTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B07D31261950272500D0F40B /* Build configuration list for PBXNativeTarget "FunTest" */;
+			buildPhases = (
+				B07D30ED1950272400D0F40B /* Sources */,
+				B07D30EE1950272400D0F40B /* Frameworks */,
+				B07D30EF1950272400D0F40B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FunTest;
+			productName = FunTest;
+			productReference = B07D30F11950272400D0F40B /* FunTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B07D31141950272500D0F40B /* FunTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B07D31291950272500D0F40B /* Build configuration list for PBXNativeTarget "FunTestTests" */;
+			buildPhases = (
+				B07D31111950272500D0F40B /* Sources */,
+				B07D31121950272500D0F40B /* Frameworks */,
+				B07D31131950272500D0F40B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B07D311B1950272500D0F40B /* PBXTargetDependency */,
+			);
+			name = FunTestTests;
+			productName = FunTestTests;
+			productReference = B07D31151950272500D0F40B /* FunTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B07D30E91950272400D0F40B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = tx;
+				TargetAttributes = {
+					B07D30F01950272400D0F40B = {
+						DevelopmentTeam = BJ24DYA2DZ;
+					};
+					B07D31141950272500D0F40B = {
+						TestTargetID = B07D30F01950272400D0F40B;
+					};
+				};
+			};
+			buildConfigurationList = B07D30EC1950272400D0F40B /* Build configuration list for PBXProject "FunTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B07D30E81950272400D0F40B;
+			productRefGroup = B07D30F21950272400D0F40B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B07D30F01950272400D0F40B /* FunTest */,
+				B07D31141950272500D0F40B /* FunTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B07D30EF1950272400D0F40B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07D310B1950272500D0F40B /* Main_iPad.storyboard in Resources */,
+				B0944C84195BD5EF003AD6B7 /* 0.png in Resources */,
+				B07D31101950272500D0F40B /* Images.xcassets in Resources */,
+				B07D31081950272500D0F40B /* Main_iPhone.storyboard in Resources */,
+				B07D30FF1950272400D0F40B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07D31131950272500D0F40B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07D31211950272500D0F40B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B07D30ED1950272400D0F40B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0944C6C195BBC96003AD6B7 /* AAFilter.cpp in Sources */,
+				B0944C6F195BBC96003AD6B7 /* FIFOSampleBuffer.cpp in Sources */,
+				B0944C71195BBC96003AD6B7 /* InterpolateCubic.cpp in Sources */,
+				B0944C73195BBC96003AD6B7 /* InterpolateShannon.cpp in Sources */,
+				B0944C76195BBC96003AD6B7 /* RateTransposer.cpp in Sources */,
+				B0944C77195BBC96003AD6B7 /* SoundTouch.cpp in Sources */,
+				B07D31051950272500D0F40B /* TXAppDelegate.m in Sources */,
+				B0944C79195BBC96003AD6B7 /* TDStretch.cpp in Sources */,
+				B0944C74195BBC96003AD6B7 /* mmx_optimized.cpp in Sources */,
+				B0936E3A1959212C0081321E /* TXAMRPlayer.mm in Sources */,
+				B0944C72195BBC96003AD6B7 /* InterpolateLinear.cpp in Sources */,
+				B0944C88195BD6B7003AD6B7 /* ImageUtil.m in Sources */,
+				B0944C75195BBC96003AD6B7 /* PeakFinder.cpp in Sources */,
+				B0944C82195BD161003AD6B7 /* TXImageFilterViewController.m in Sources */,
+				B0944C78195BBC96003AD6B7 /* sse_optimized.cpp in Sources */,
+				B07D31011950272500D0F40B /* main.m in Sources */,
+				B07D312E1950276000D0F40B /* TXMaskView.m in Sources */,
+				B0936E481959239D0081321E /* TXAMRRecorder.mm in Sources */,
+				B0944C6E195BBC96003AD6B7 /* cpu_detect_x86.cpp in Sources */,
+				B0944C6D195BBC96003AD6B7 /* BPMDetect.cpp in Sources */,
+				B0944C70195BBC96003AD6B7 /* FIRFilter.cpp in Sources */,
+				B07D310E1950272500D0F40B /* TXViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07D31111950272500D0F40B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07D31231950272500D0F40B /* FunTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B07D311B1950272500D0F40B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B07D30F01950272400D0F40B /* FunTest */;
+			targetProxy = B07D311A1950272500D0F40B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B07D30FD1950272400D0F40B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07D30FE1950272400D0F40B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B07D31061950272500D0F40B /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07D31071950272500D0F40B /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B07D31091950272500D0F40B /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07D310A1950272500D0F40B /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B07D311F1950272500D0F40B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07D31201950272500D0F40B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B07D31241950272500D0F40B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B07D31251950272500D0F40B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B07D31271950272500D0F40B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunTest/FunTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "FunTest/FunTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FunTest/opencore",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "42DA2655-C352-459D-942B-BA684B8AAEB5";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B07D31281950272500D0F40B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunTest/FunTest-Prefix.pch";
+				INFOPLIST_FILE = "FunTest/FunTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FunTest/opencore",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "42DA2655-C352-459D-942B-BA684B8AAEB5";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B07D312A1950272500D0F40B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FunTest.app/FunTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunTest/FunTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FunTestTests/FunTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B07D312B1950272500D0F40B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FunTest.app/FunTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunTest/FunTest-Prefix.pch";
+				INFOPLIST_FILE = "FunTestTests/FunTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B07D30EC1950272400D0F40B /* Build configuration list for PBXProject "FunTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07D31241950272500D0F40B /* Debug */,
+				B07D31251950272500D0F40B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B07D31261950272500D0F40B /* Build configuration list for PBXNativeTarget "FunTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07D31271950272500D0F40B /* Debug */,
+				B07D31281950272500D0F40B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B07D31291950272500D0F40B /* Build configuration list for PBXNativeTarget "FunTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07D312A1950272500D0F40B /* Debug */,
+				B07D312B1950272500D0F40B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B07D30E91950272400D0F40B /* Project object */;
+}
