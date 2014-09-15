@@ -10,6 +10,17 @@
 #import "TXMaskView.h"
 #import "SoundTouch.h"
 #import "TXImageFilterViewController.h"
+#import "TXImagePickerController.h"
+#import "TXScrollImageViewController.h"
+#import "TXCameraOverlayViewController.h"
+#import "YCameraViewController.h"
+#import "TXVisionViewController.h"
+#import "TXVideoViewController.h"
+#import "TXBgImageViewController.h"
+#import "TXMapViewController.h"
+#import "TXStatusBarViewController.h"
+#import "TXJumpAppStoreViewController.h"
+#import "TXMAMapViewController.h"
 
 @interface TXViewController ()
 
@@ -28,9 +39,12 @@
 //    maskView.maskColorRef = [[UIColor colorWithWhite:0.0 alpha:0.6] CGColor];
 //    [self.view addSubview:maskView];
     
-    player = [[TXAMRPlayer alloc] init];
-    player.delegate = self;
-    recorder = [[TXAMRRecorder alloc] init];
+    CGRect frame = CGRectMake(13, 10, 38, 30);
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    backButton.frame = frame;
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(handleBackButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +53,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)handleBackButtonClick:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)handleRecordButtonClick:(id)sender {
+    if (recorder == nil) {
+        recorder = [[TXAMRRecorder alloc] init];
+    }
+    
     if ([recorder isRunning]) {
         [recorder stopRecord];
         
@@ -56,6 +79,11 @@
 }
 
 - (IBAction)handlePlayButtonClick:(id)sender {
+    if (player == nil) {
+        player = [[TXAMRPlayer alloc] init];
+        player.delegate = self;
+    }
+    
     if (player.playing) {
         [player stop];
     }
@@ -96,6 +124,10 @@
         NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         NSString *path = [docPath stringByAppendingPathComponent:@"1.wav"];
         
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+        [[AVAudioSession sharedInstance] setActive:YES error:nil];
+        UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+        AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(audioRouteOverride), &audioRouteOverride);
         wavRecorder = [[AVAudioRecorder alloc] initWithURL:[NSURL URLWithString:path] settings:recordSetting error:nil];
         wavRecorder.delegate = self;
         [wavRecorder prepareToRecord];
@@ -121,6 +153,8 @@
 //    mSoundTouch.setSetting(SETTING_SEQUENCE_MS, 40);
 //    mSoundTouch.setSetting(SETTING_SEEKWINDOW_MS, 16);
 //    mSoundTouch.setSetting(SETTING_OVERLAP_MS, 8);
+   
+#define BUFFER_SIZE 1024
     
     NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *path = [docPath stringByAppendingPathComponent:@"1.wav"];
@@ -129,13 +163,12 @@
     int pcmSize = (int)wavData.length;
     int nSamples = pcmSize / sizeof(short);
     mSoundTouch.putSamples(pcmData, nSamples);
-    short *samples = (short *)malloc(pcmSize);
     int numSamples = 0;
     NSMutableData *soundTouchData = [[NSMutableData alloc] init];
     do {
-        memset(samples, 0, pcmSize);
-        numSamples = mSoundTouch.receiveSamples(samples, pcmSize);
-        [soundTouchData appendBytes:samples length:numSamples*sizeof(short)];
+        short sampleBuffer[BUFFER_SIZE];
+        numSamples = mSoundTouch.receiveSamples(sampleBuffer, BUFFER_SIZE);
+        [soundTouchData appendBytes:sampleBuffer length:numSamples*sizeof(short)];
     } while (numSamples > 0);
     NSMutableData *outWavData = [[NSMutableData alloc] init];
     void *header = createWaveHeader((int)soundTouchData.length, 1, 8000, 16);
@@ -145,7 +178,6 @@
     NSString *outPath = [docPath stringByAppendingPathComponent:@"2.wav"];
     [outWavData writeToFile:outPath atomically:YES];
     
-    free(samples);
     free(header);
 }
 
@@ -167,6 +199,143 @@
     [self presentViewController:imageFilterVC animated:YES completion:^{
         
     }];
+}
+
+- (IBAction)handleCameraButtonClick:(id)sender {
+    TXImagePickerController *picker = [[TXImagePickerController alloc] initWithDelegate:self];
+//    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+//- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+//{
+//    NSLog(@"%@", viewController);
+////    for (UIView *subview in [viewController.view subviews]) {
+////        NSLog(@"%@", subview);
+////    }
+//    
+//    UIView *PLCameraView = [self findView:viewController.view withName:@"PLCameraView"];
+//    NSLog(@"%@", PLCameraView);
+////    UIView *PLCropOverlay = [self findView:PLCameraView withName:@"PLCropOverlay"];
+////    NSLog(@"%@", PLCropOverlay);
+//    UIView *bottomBar=[self findView:PLCameraView withName:@"PLCropOverlayBottomBar"];
+//    NSLog(@"%@", bottomBar);
+////    UIView *TPBottomDualButtonBar = [self findView:PLCropOverlay withName:@"TPBottomDualButtonBar"];
+////    NSLog(@"%@", TPBottomDualButtonBar);
+////    UIView *TPPushButton = [self findView:bottomBar withName:@"TPPushButton"];
+////    NSLog(@"%@", TPPushButton);
+//    //Get ImageView For Camera
+//    UIImageView *bottomBarImageForCamera = [bottomBar.subviews objectAtIndex:1];
+//    NSLog(@"%@", bottomBarImageForCamera);
+//    //Get Button 0(The Capture Button)
+//    UIButton *cameraButton=[bottomBarImageForCamera.subviews objectAtIndex:0];
+//    NSLog(@"%@", cameraButton);
+//    //Get Button 1
+//    UIButton *cancelButton=[bottomBarImageForCamera.subviews objectAtIndex:1];
+//    NSLog(@"%@", cancelButton);
+//    CGRect frame = cancelButton.frame;
+//    CGRect rect = frame;
+//    frame.origin.x = bottomBarImageForCamera.frame.size.width - 6 - frame.size.width;
+//    cancelButton.frame = frame;
+//    
+//    UIButton *pickButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    pickButton.frame = rect;
+//    [pickButton addTarget:self action:@selector(handlePickLocalClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [bottomBarImageForCamera addSubview:pickButton];
+//}
+
+- (void)handlePickLocalClick:(id)sender
+{
+    TXImagePickerController *picker = [[TXImagePickerController alloc] init];
+    picker.pickerDelegate = self;
+//    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+//    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (UIView *)findView:(UIView *)aView withName:(NSString *)name
+{
+    Class cls = [aView class];
+    NSString *desc = [cls description];
+    
+    if ([name isEqualToString:desc]) {
+        return aView;
+    }
+    
+    for (NSUInteger i = 0; i < [aView.subviews count]; i++) {
+        UIView *subView = [aView.subviews objectAtIndex:i];
+        subView = [self findView:subView withName:name];
+        if (subView) {
+            return subView;
+        }
+    }
+    
+    return nil;
+}
+
+- (IBAction)handleScrollButtonClick:(id)sender {
+    TXScrollImageViewController *scrollImageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"scrollImageVC"];
+    [self presentViewController:scrollImageVC animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)handleCaptureButtonClick:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.allowsEditing = YES;
+//    picker.showsCameraControls = NO;
+    picker.wantsFullScreenLayout = YES;
+    TXCameraOverlayViewController *overlayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"cameraOverlayViewController"];
+    picker.cameraOverlayView = overlayVC.view;
+    overlayVC.pickerController = picker;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+- (IBAction)handleYCameraButtonClick:(id)sender {
+    YCameraViewController *cameraVC = [self.storyboard instantiateViewControllerWithIdentifier:@"yCameraViewController"];
+    cameraVC.delegate = self;
+    [self presentViewController:cameraVC animated:YES completion:nil];
+}
+
+- (IBAction)handleVisionButtonClick:(id)sender {
+    TXVisionViewController *visionController = [self.storyboard instantiateViewControllerWithIdentifier:@"visionViewController"];
+    [self presentViewController:visionController animated:YES completion:nil];
+}
+
+- (IBAction)handleBackgroundPicButtonClick:(id)sender {
+    TXBgImageViewController *bgImageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"bgImageViewController"];
+    [self presentViewController:bgImageVC animated:YES completion:nil];
+}
+
+- (IBAction)handleMapButtonClick:(id)sender {
+    TXMapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"mapViewController"];
+    [self presentViewController:mapVC animated:YES completion:nil];
+}
+
+- (IBAction)handleTipButtonClick:(id)sender {
+    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"statusBarNavController"];
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
+#pragma mark - YCameraViewController Delegate
+- (void)didFinishPickingImage:(UIImage *)image{
+    NSLog(@"YCamera %@", image);
+}
+
+- (void)yCameraControllerdidSkipped{
+    
+}
+
+- (void)yCameraControllerDidCancel{
+    
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    NSLog(@"%@", image);
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
@@ -223,6 +392,21 @@ void *createWaveHeader(int fileLength, short channel, int sampleRate, short bitP
     header->dataSize = fileLength;
     
     return header;
+}
+
+- (IBAction)handleViewButtonClick:(id)sender {
+    TXVideoViewController *videoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"videoViewController"];
+    [self presentViewController:videoVC animated:YES completion:nil];
+}
+
+- (IBAction)handleStoreButtonClick:(id)sender {
+    TXJumpAppStoreViewController *jumpStoreVC = [self.storyboard instantiateViewControllerWithIdentifier:@"jumpAppStoreViewController"];
+    [self presentViewController:jumpStoreVC animated:YES completion:nil];
+}
+
+- (IBAction)handleGaodeButtonClick:(id)sender {
+    TXMapViewController *maMapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"maMapViewController"];
+    [self presentViewController:maMapVC animated:YES completion:nil];
 }
 
 @end

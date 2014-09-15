@@ -7,12 +7,16 @@
 //
 
 #import "TXAppDelegate.h"
+#import <MAMapKit/MAMapKit.h>
 
 @implementation TXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [[MAMapServices sharedServices] setApiKey:@"c7b840711e662a981b93acc976976051"];
+    
     return YES;
 }
 							

@@ -11,7 +11,7 @@
 #import "TXAMRPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface TXViewController : UIViewController<AVAudioRecorderDelegate, AVAudioPlayerDelegate> {
+@interface TXViewController : UIViewController<AVAudioRecorderDelegate, AVAudioPlayerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     TXAMRPlayer *player;
     TXAMRRecorder *recorder;
     
@@ -33,6 +33,14 @@
 - (IBAction)handleChangeVoiceButtonClick:(id)sender;
 - (IBAction)handleWavButtonClick:(id)sender;
 - (IBAction)handleImageFilterClick:(id)sender;
+- (IBAction)handleCameraButtonClick:(id)sender;
+- (IBAction)handleScrollButtonClick:(id)sender;
+- (IBAction)handleCaptureButtonClick:(id)sender;
+- (IBAction)handleYCameraButtonClick:(id)sender;
+- (IBAction)handleVisionButtonClick:(id)sender;
+- (IBAction)handleBackgroundPicButtonClick:(id)sender;
+- (IBAction)handleMapButtonClick:(id)sender;
+- (IBAction)handleTipButtonClick:(id)sender;
 
 // wav头部结构体
 struct wave_header {
