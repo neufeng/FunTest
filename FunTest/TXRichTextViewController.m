@@ -28,17 +28,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSString *content = @"";
+    for (int i = 1; i <= 60; i++) {
+        NSString *temp = [NSString stringWithFormat:@"[/%03d]", i];
+        content = [content stringByAppendingString:temp];
+    }
+    content = [content stringByAppendingString:@" 达人 @小月月 @小天使 @葫芦娃 @smith"];
+    
     self.richLabel.emojiDelegate = self;
     self.richLabel.font = [UIFont systemFontOfSize:14.0];
+    self.richLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.richLabel.isNeedAtAndPoundSign = YES;
-    self.richLabel.customEmojiRegex = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
-    self.richLabel.customEmojiPlistName = @"expression.plist";
+    self.richLabel.customEmojiRegex = @"\\[/([0-9]{1,3})\\]";
+    self.richLabel.customEmojiPlistName = @"expression2.plist";
     self.richLabel.disableThreeCommon = YES;
-    self.richLabel.emojiText = @"[微笑] 达人 @小月月 ";
+    self.richLabel.emojiText = content;
 
 //    [/001]正则
 //    \\[/([0-9]{1,3})\\]
 
+//    [微笑]正则
+//    \\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,13 +73,19 @@
     button.enabled = NO;
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-    for (int i = 0; i < 100; i++) {
-        NSString *value = [NSString stringWithFormat:@"m%03d.png", i];
-        NSString *key = [NSString stringWithFormat:@"[/%d]", i];
-        [dic setObject:value forKey:key];
-    }
-    for (int i = 0; i < 104; i++) {
-        NSString *value = [NSString stringWithFormat:@"m%03d.png", i];
+//    for (int i = 0; i < 100; i++) {
+//        NSString *value = [NSString stringWithFormat:@"m%03d.png", i];
+//        NSString *key = [NSString stringWithFormat:@"[/%d]", i];
+//        [dic setObject:value forKey:key];
+//    }
+//    for (int i = 0; i < 104; i++) {
+//        NSString *value = [NSString stringWithFormat:@"m%03d.png", i];
+//        NSString *key = [NSString stringWithFormat:@"[/%03d]", i];
+//        [dic setObject:value forKey:key];
+//    }
+    
+    for (int i = 1; i <= 60; i++) {
+        NSString *value = [NSString stringWithFormat:@"Expression_%d.png", i];
         NSString *key = [NSString stringWithFormat:@"[/%03d]", i];
         [dic setObject:value forKey:key];
     }

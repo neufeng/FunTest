@@ -187,6 +187,7 @@
 		B052223A19C7E1C0008D6BF8 /* Expression_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B05221FD19C7E1C0008D6BF8 /* Expression_7@2x.png */; };
 		B052223B19C7E1C0008D6BF8 /* Expression_8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B05221FE19C7E1C0008D6BF8 /* Expression_8@2x.png */; };
 		B052223C19C7E1C0008D6BF8 /* Expression_9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B05221FF19C7E1C0008D6BF8 /* Expression_9@2x.png */; };
+		B052223E19C8131F008D6BF8 /* expression2.plist in Resources */ = {isa = PBXBuildFile; fileRef = B052223D19C8131F008D6BF8 /* expression2.plist */; };
 		B070F7F6198A3D96001B3A4E /* TXVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B070F7F5198A3D96001B3A4E /* TXVideoViewController.m */; };
 		B07D30F51950272400D0F40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F41950272400D0F40B /* Foundation.framework */; };
 		B07D30F71950272400D0F40B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F61950272400D0F40B /* CoreGraphics.framework */; };
@@ -512,6 +513,7 @@
 		B05221FD19C7E1C0008D6BF8 /* Expression_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_7@2x.png"; sourceTree = "<group>"; };
 		B05221FE19C7E1C0008D6BF8 /* Expression_8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_8@2x.png"; sourceTree = "<group>"; };
 		B05221FF19C7E1C0008D6BF8 /* Expression_9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_9@2x.png"; sourceTree = "<group>"; };
+		B052223D19C8131F008D6BF8 /* expression2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expression2.plist; sourceTree = "<group>"; };
 		B070F7F4198A3D96001B3A4E /* TXVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXVideoViewController.h; sourceTree = "<group>"; };
 		B070F7F5198A3D96001B3A4E /* TXVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXVideoViewController.m; sourceTree = "<group>"; };
 		B07D30F11950272400D0F40B /* FunTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -872,6 +874,7 @@
 		B05221C219C7E1C0008D6BF8 /* Emoticon */ = {
 			isa = PBXGroup;
 			children = (
+				B052223D19C8131F008D6BF8 /* expression2.plist */,
 				B05221C319C7E1C0008D6BF8 /* expression.plist */,
 				B05221C419C7E1C0008D6BF8 /* Expression_10@2x.png */,
 				B05221C519C7E1C0008D6BF8 /* Expression_11@2x.png */,
@@ -1433,6 +1436,7 @@
 				B050E7AD199DE7F600D34FD4 /* 095.jpg in Resources */,
 				B050E772199DE7F600D34FD4 /* 029.jpg in Resources */,
 				B050E76D199DE7F600D34FD4 /* 024.jpg in Resources */,
+				B052223E19C8131F008D6BF8 /* expression2.plist in Resources */,
 				B050E781199DE7F600D34FD4 /* 046.jpg in Resources */,
 				B052220C19C7E1C0008D6BF8 /* Expression_20@2x.png in Resources */,
 				B052221419C7E1C0008D6BF8 /* Expression_28@2x.png in Resources */,
