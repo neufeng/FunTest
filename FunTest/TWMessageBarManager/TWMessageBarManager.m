@@ -23,8 +23,8 @@ NSUInteger const kTWMessageViewiOS7Identifier = 7;
 // Numerics (TWMessageBarManager)
 CGFloat const kTWMessageBarManagerDisplayDelay = 3.0f;
 CGFloat const kTWMessageBarManagerDismissAnimationDuration = 0.25f;
-CGFloat const kTWMessageBarManagerPanVelocity = 0.2f;
-CGFloat const kTWMessageBarManagerPanAnimationDuration = 0.0002f;
+//CGFloat const kTWMessageBarManagerPanVelocity = 0.2f;
+//CGFloat const kTWMessageBarManagerPanAnimationDuration = 0.0002f;
 
 // Strings (TWMessageBarStyleSheet)
 NSString * const kTWMessageBarStyleSheetImageIconError = @"icon-error.png";
@@ -986,7 +986,7 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
 
 - (CGRect)orientFrame:(CGRect)frame
 {
-    if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) || UIDeviceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
+    if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) || UIDeviceOrientationIsLandscape((UIDeviceOrientation)[UIApplication sharedApplication].statusBarOrientation))
     {
         frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.height, frame.size.width);
     }

@@ -21,6 +21,7 @@
 #import "TXStatusBarViewController.h"
 #import "TXJumpAppStoreViewController.h"
 #import "TXMAMapViewController.h"
+#import "TXRichTextViewController.h"
 
 @interface TXViewController ()
 
@@ -407,6 +408,11 @@ void *createWaveHeader(int fileLength, short channel, int sampleRate, short bitP
 - (IBAction)handleGaodeButtonClick:(id)sender {
     TXMapViewController *maMapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"maMapViewController"];
     [self presentViewController:maMapVC animated:YES completion:nil];
+}
+
+- (IBAction)handleFaceButtonClick:(id)sender {
+    TXRichTextViewController *richTextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"richTextViewController"];
+    [self presentViewController:richTextVC animated:YES completion:nil];
 }
 
 @end
