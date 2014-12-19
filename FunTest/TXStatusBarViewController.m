@@ -9,6 +9,7 @@
 #import "TXStatusBarViewController.h"
 #import "JDStatusBarNotification.h"
 #import "TWMessageBarManager.h"
+#import "TXLineView.h"
 
 @interface TXStatusBarViewController ()
 
@@ -29,6 +30,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    CGRect frame = CGRectMake(10, 200, 300, 1);
+    TXLineView *lineView = [[TXLineView alloc] initWithFrame:frame];
+    lineView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:lineView];
 }
 
 - (void)didReceiveMemoryWarning

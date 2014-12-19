@@ -26,8 +26,8 @@ typedef NS_OPTIONS(NSUInteger, MLEmojiLabelLinkType) {
 @protocol MLEmojiLabelDelegate <NSObject>
 
 @optional
+- (void)mlEmojiLabel:(MLEmojiLabel*)emojiLabel didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result;
 - (void)mlEmojiLabel:(MLEmojiLabel*)emojiLabel didSelectLink:(NSString*)link withType:(MLEmojiLabelLinkType)type;
-
 
 @end
 

@@ -497,6 +497,10 @@ static inline CGFloat TTTFlushFactorForTextAlignment(NSTextAlignment textAlignme
 - (void)attributedLabel:(TTTAttributedLabel *)label
 didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result;
 {
+    if (self.emojiDelegate && [self.emojiDelegate respondsToSelector:@selector(mlEmojiLabel:didSelectLinkWithTextCheckingResult:)]) {
+        [self.emojiDelegate mlEmojiLabel:self didSelectLinkWithTextCheckingResult:result];
+    }
+    
     if (result.resultType == NSTextCheckingTypeCorrection) {
         //判断消息类型
         for (NSUInteger i=0; i<kURLActionCount; i++) {

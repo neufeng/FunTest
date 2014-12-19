@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -200,6 +200,36 @@
                                     <action selector="handleFaceButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nCR-w8-dpN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rf9-84-NNq">
+                                <rect key="frame" x="217" y="211" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="绘图">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDrawButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lb1-4q-dgO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y0x-Yz-jAW">
+                                <rect key="frame" x="225" y="265" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="重用">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleReuseButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Np2-gY-P09"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jcu-pP-940">
+                                <rect key="frame" x="129" y="310" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="解密">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDecrytButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pkg-Sl-bmE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -214,6 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="154" y="0.0"/>
         </scene>
         <!--Image Filter View Controller-->
         <scene sceneID="fn8-8b-hWn">
@@ -362,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lxh-jt-chU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="674"/>
+            <point key="canvasLocation" x="154" y="616"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="RWo-SM-LJH">
@@ -430,7 +461,7 @@
             </objects>
             <point key="canvasLocation" x="519" y="1196"/>
         </scene>
-        <!--Status Bar View Controller - 状态栏-->
+        <!--StatusBar-->
         <scene sceneID="RIj-m7-YSS">
             <objects>
                 <viewController storyboardIdentifier="statusBarViewController" id="T8x-V8-HKz" customClass="TXStatusBarViewController" sceneMemberID="viewController">
@@ -461,7 +492,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="状态栏" id="t2a-Lq-6t4">
+                    <navigationItem key="navigationItem" title="StatusBar" id="t2a-Lq-6t4">
                         <barButtonItem key="leftBarButtonItem" title="返回" id="MJe-ea-m9Q">
                             <connections>
                                 <action selector="handleBackButtonClick:" destination="T8x-V8-HKz" id="baj-wD-bMI"/>
@@ -472,6 +503,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hs8-OG-fIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1045" y="1793"/>
+        </scene>
+        <!--Reuse View Controller-->
+        <scene sceneID="RYb-nq-6ke">
+            <objects>
+                <viewController storyboardIdentifier="reuseViewController" id="sxo-ox-KD1" customClass="TXReuseViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fhj-Yp-5de">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sn4-DE-U0J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sxo-ox-KD1" id="aIT-CU-biG"/>
+                                    <outlet property="delegate" destination="sxo-ox-KD1" id="mNV-zv-wbn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaL-2H-UCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1414" y="1803"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Yko-VD-vAV">
@@ -840,13 +896,46 @@
                                     <action selector="handleCallButtonClick:" destination="6yb-iK-WuF" eventType="touchUpInside" id="oRz-Dd-EXP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xep-YT-PVl">
+                                <rect key="frame" x="16" y="55" width="288" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dZM-59-htF">
+                                <rect key="frame" x="160" y="230" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="testLabel" destination="Xep-YT-PVl" id="CKE-W5-9gJ"/>
+                        <outlet property="testLablel2" destination="dZM-59-htF" id="hVa-33-Pb0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZJ-Hk-6lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1265" y="8"/>
+        </scene>
+        <!--Draw View Controller-->
+        <scene sceneID="aSa-Qo-Rkn">
+            <objects>
+                <viewController storyboardIdentifier="drawViewController" id="wMs-v2-TZy" customClass="TXDrawViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YSU-bX-SaR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dse-6n-vHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="1793"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wiy-3Z-1SM">

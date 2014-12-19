@@ -11,4 +11,7 @@
 
 @interface TXJumpAppStoreViewController : TXViewController<SKStoreProductViewControllerDelegate>
 
+@property (strong, nonatomic) IBOutlet UILabel *testLabel;
+@property (strong, nonatomic) IBOutlet UILabel *testLablel2;
+
 @end

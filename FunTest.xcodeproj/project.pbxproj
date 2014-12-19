@@ -188,6 +188,8 @@
 		B052223B19C7E1C0008D6BF8 /* Expression_8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B05221FE19C7E1C0008D6BF8 /* Expression_8@2x.png */; };
 		B052223C19C7E1C0008D6BF8 /* Expression_9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B05221FF19C7E1C0008D6BF8 /* Expression_9@2x.png */; };
 		B052223E19C8131F008D6BF8 /* expression2.plist in Resources */ = {isa = PBXBuildFile; fileRef = B052223D19C8131F008D6BF8 /* expression2.plist */; };
+		B061533F1A1C3E8600C2E2BA /* TXLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B061533E1A1C3E8600C2E2BA /* TXLineView.m */; };
+		B06AED021A4279E8002F8A60 /* TXSystemCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B06AED011A4279E8002F8A60 /* TXSystemCategory.m */; };
 		B070F7F6198A3D96001B3A4E /* TXVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B070F7F5198A3D96001B3A4E /* TXVideoViewController.m */; };
 		B07D30F51950272400D0F40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F41950272400D0F40B /* Foundation.framework */; };
 		B07D30F71950272400D0F40B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07D30F61950272400D0F40B /* CoreGraphics.framework */; };
@@ -285,6 +287,7 @@
 		B0944C82195BD161003AD6B7 /* TXImageFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0944C81195BD161003AD6B7 /* TXImageFilterViewController.m */; };
 		B0944C84195BD5EF003AD6B7 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = B0944C83195BD5EF003AD6B7 /* 0.png */; };
 		B0944C88195BD6B7003AD6B7 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B0944C87195BD6B7003AD6B7 /* ImageUtil.m */; };
+		B0A469561A0214F400A71D2C /* TXDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A469551A0214F300A71D2C /* TXDrawViewController.m */; };
 		B0A7F3EF197FB65000EDCBDB /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A7F3EA197FB65000EDCBDB /* PBJMediaWriter.m */; };
 		B0A7F3F0197FB65000EDCBDB /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A7F3EC197FB65000EDCBDB /* PBJVision.m */; };
 		B0A7F3F1197FB65000EDCBDB /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A7F3EE197FB65000EDCBDB /* PBJVisionUtilities.m */; };
@@ -309,6 +312,11 @@
 		B0B22C2519C6E14D0096E41A /* animatedCar_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B0B22C2419C6E14D0096E41A /* animatedCar_1.png */; };
 		B0B22C2719C6E1600096E41A /* animatedTrain_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B0B22C2619C6E1600096E41A /* animatedTrain_1.png */; };
 		B0B22C2919C6E1C50096E41A /* hema.png in Resources */ = {isa = PBXBuildFile; fileRef = B0B22C2819C6E1C50096E41A /* hema.png */; };
+		B0CFC7AD1A08C56F0058F491 /* TXReuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CFC7AC1A08C56F0058F491 /* TXReuseViewController.m */; };
+		B0CFC7B11A08C7270058F491 /* TXTableCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CFC7AF1A08C7270058F491 /* TXTableCell1.m */; };
+		B0CFC7B21A08C7270058F491 /* TXTableCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CFC7B01A08C7270058F491 /* TXTableCell1.xib */; };
+		B0CFC7B61A08C7600058F491 /* TXTableCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CFC7B41A08C7600058F491 /* TXTableCell2.m */; };
+		B0CFC7B71A08C7600058F491 /* TXTableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CFC7B51A08C7600058F491 /* TXTableCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -514,6 +522,10 @@
 		B05221FE19C7E1C0008D6BF8 /* Expression_8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_8@2x.png"; sourceTree = "<group>"; };
 		B05221FF19C7E1C0008D6BF8 /* Expression_9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_9@2x.png"; sourceTree = "<group>"; };
 		B052223D19C8131F008D6BF8 /* expression2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expression2.plist; sourceTree = "<group>"; };
+		B061533D1A1C3E8600C2E2BA /* TXLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXLineView.h; sourceTree = "<group>"; };
+		B061533E1A1C3E8600C2E2BA /* TXLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXLineView.m; sourceTree = "<group>"; };
+		B06AED001A4279E8002F8A60 /* TXSystemCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSystemCategory.h; sourceTree = "<group>"; };
+		B06AED011A4279E8002F8A60 /* TXSystemCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSystemCategory.m; sourceTree = "<group>"; };
 		B070F7F4198A3D96001B3A4E /* TXVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXVideoViewController.h; sourceTree = "<group>"; };
 		B070F7F5198A3D96001B3A4E /* TXVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXVideoViewController.m; sourceTree = "<group>"; };
 		B07D30F11950272400D0F40B /* FunTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -653,6 +665,8 @@
 		B0944C85195BD6B7003AD6B7 /* ColorMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
 		B0944C86195BD6B7003AD6B7 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
 		B0944C87195BD6B7003AD6B7 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
+		B0A469541A0214F300A71D2C /* TXDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXDrawViewController.h; sourceTree = "<group>"; };
+		B0A469551A0214F300A71D2C /* TXDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXDrawViewController.m; sourceTree = "<group>"; };
 		B0A7F3E9197FB65000EDCBDB /* PBJMediaWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJMediaWriter.h; sourceTree = "<group>"; };
 		B0A7F3EA197FB65000EDCBDB /* PBJMediaWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJMediaWriter.m; sourceTree = "<group>"; };
 		B0A7F3EB197FB65000EDCBDB /* PBJVision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJVision.h; sourceTree = "<group>"; };
@@ -685,6 +699,14 @@
 		B0B22C2419C6E14D0096E41A /* animatedCar_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedCar_1.png; sourceTree = "<group>"; };
 		B0B22C2619C6E1600096E41A /* animatedTrain_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedTrain_1.png; sourceTree = "<group>"; };
 		B0B22C2819C6E1C50096E41A /* hema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hema.png; sourceTree = "<group>"; };
+		B0CFC7AB1A08C56F0058F491 /* TXReuseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXReuseViewController.h; sourceTree = "<group>"; };
+		B0CFC7AC1A08C56F0058F491 /* TXReuseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXReuseViewController.m; sourceTree = "<group>"; };
+		B0CFC7AE1A08C7270058F491 /* TXTableCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXTableCell1.h; sourceTree = "<group>"; };
+		B0CFC7AF1A08C7270058F491 /* TXTableCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTableCell1.m; sourceTree = "<group>"; };
+		B0CFC7B01A08C7270058F491 /* TXTableCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TXTableCell1.xib; sourceTree = "<group>"; };
+		B0CFC7B31A08C7600058F491 /* TXTableCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXTableCell2.h; sourceTree = "<group>"; };
+		B0CFC7B41A08C7600058F491 /* TXTableCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTableCell2.m; sourceTree = "<group>"; };
+		B0CFC7B51A08C7600058F491 /* TXTableCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TXTableCell2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1037,6 +1059,20 @@
 				B0B22C1F19C6E0EF0096E41A /* CustomAnnotationView.m */,
 				B0B22C2019C6E0EF0096E41A /* CustomCalloutView.h */,
 				B0B22C2119C6E0EF0096E41A /* CustomCalloutView.m */,
+				B0A469541A0214F300A71D2C /* TXDrawViewController.h */,
+				B0A469551A0214F300A71D2C /* TXDrawViewController.m */,
+				B0CFC7AB1A08C56F0058F491 /* TXReuseViewController.h */,
+				B0CFC7AC1A08C56F0058F491 /* TXReuseViewController.m */,
+				B0CFC7AE1A08C7270058F491 /* TXTableCell1.h */,
+				B0CFC7AF1A08C7270058F491 /* TXTableCell1.m */,
+				B0CFC7B01A08C7270058F491 /* TXTableCell1.xib */,
+				B0CFC7B31A08C7600058F491 /* TXTableCell2.h */,
+				B0CFC7B41A08C7600058F491 /* TXTableCell2.m */,
+				B0CFC7B51A08C7600058F491 /* TXTableCell2.xib */,
+				B061533D1A1C3E8600C2E2BA /* TXLineView.h */,
+				B061533E1A1C3E8600C2E2BA /* TXLineView.m */,
+				B06AED001A4279E8002F8A60 /* TXSystemCategory.h */,
+				B06AED011A4279E8002F8A60 /* TXSystemCategory.m */,
 				B05221B819C7D660008D6BF8 /* MLEmojiLabel */,
 				B0A7F3E8197FB65000EDCBDB /* Vision */,
 				B0848BAA1967156800BB2590 /* SCCaptureCamera */,
@@ -1298,7 +1334,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TX;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = tx;
 				TargetAttributes = {
 					B07D30F01950272400D0F40B = {
@@ -1392,6 +1428,7 @@
 				B050E764199DE7F600D34FD4 /* 014.jpg in Resources */,
 				B050E769199DE7F600D34FD4 /* 019.jpg in Resources */,
 				B050E761199DE7F600D34FD4 /* 011.jpg in Resources */,
+				B0CFC7B71A08C7600058F491 /* TXTableCell2.xib in Resources */,
 				B0848BEC1967156800BB2590 /* touch_focus_x@2x.png in Resources */,
 				B050E7A2199DE7F600D34FD4 /* 083.jpg in Resources */,
 				B052220A19C7E1C0008D6BF8 /* Expression_19@2x.png in Resources */,
@@ -1402,6 +1439,7 @@
 				B07D31101950272500D0F40B /* Images.xcassets in Resources */,
 				B052222119C7E1C0008D6BF8 /* Expression_3@2x.png in Resources */,
 				B050E7A4199DE7F600D34FD4 /* 085.jpg in Resources */,
+				B0CFC7B21A08C7270058F491 /* TXTableCell1.xib in Resources */,
 				B0848BD71967156800BB2590 /* close_cha.png in Resources */,
 				B052222219C7E1C0008D6BF8 /* Expression_40@2x.png in Resources */,
 				B0848BEB1967156800BB2590 /* touch_focus_x.png in Resources */,
@@ -1599,6 +1637,7 @@
 				B0944C72195BBC96003AD6B7 /* InterpolateLinear.cpp in Sources */,
 				B085C9191966E8F9003FB3BA /* YCameraViewController.m in Sources */,
 				B0944C88195BD6B7003AD6B7 /* ImageUtil.m in Sources */,
+				B061533F1A1C3E8600C2E2BA /* TXLineView.m in Sources */,
 				B0944C75195BBC96003AD6B7 /* PeakFinder.cpp in Sources */,
 				B010941B19A1A0BC005DE7BF /* JDStatusBarNotification.m in Sources */,
 				B015CBE519648A7D006A6164 /* TXScrollImageViewController.m in Sources */,
@@ -1611,15 +1650,20 @@
 				B07D31011950272500D0F40B /* main.m in Sources */,
 				B0B22C2319C6E0EF0096E41A /* CustomCalloutView.m in Sources */,
 				B0848BF01967156800BB2590 /* SCSlider.m in Sources */,
+				B0CFC7B61A08C7600058F491 /* TXTableCell2.m in Sources */,
 				B07D312E1950276000D0F40B /* TXMaskView.m in Sources */,
 				B0936E481959239D0081321E /* TXAMRRecorder.mm in Sources */,
+				B0CFC7B11A08C7270058F491 /* TXTableCell1.m in Sources */,
 				B085C7F3196665B3003FB3BA /* TXCameraOverlayViewController.m in Sources */,
 				B0944C6E195BBC96003AD6B7 /* cpu_detect_x86.cpp in Sources */,
 				B0944C6D195BBC96003AD6B7 /* BPMDetect.cpp in Sources */,
 				B0848BEF1967156800BB2590 /* SCNavigationController.m in Sources */,
+				B0CFC7AD1A08C56F0058F491 /* TXReuseViewController.m in Sources */,
 				B044B4DB19614623008A9763 /* TXImagePickerController.m in Sources */,
+				B06AED021A4279E8002F8A60 /* TXSystemCategory.m in Sources */,
 				B0A7F3EF197FB65000EDCBDB /* PBJMediaWriter.m in Sources */,
 				B0944C70195BBC96003AD6B7 /* FIRFilter.cpp in Sources */,
+				B0A469561A0214F400A71D2C /* TXDrawViewController.m in Sources */,
 				B05221B619C7D4EC008D6BF8 /* TXRichTextViewController.m in Sources */,
 				B0A7F3F9197FBE4000EDCBDB /* PBJGLProgram.m in Sources */,
 				B07D310E1950272500D0F40B /* TXViewController.m in Sources */,
@@ -1685,6 +1729,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1697,7 +1745,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bao Shi Ju (996T5D9VH2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bao Shi Ju (996T5D9VH2)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1716,9 +1765,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "4bff3e5d-2b4d-4685-bd48-4310e9ab2a4b";
+				PROVISIONING_PROFILE = "b819b55a-59bb-48af-ba25-a481e468865a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -1726,6 +1776,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1738,7 +1792,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bao Shi Ju (996T5D9VH2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bao Shi Ju (996T5D9VH2)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1750,10 +1805,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PROVISIONING_PROFILE = "4bff3e5d-2b4d-4685-bd48-4310e9ab2a4b";
+				PROVISIONING_PROFILE = "b819b55a-59bb-48af-ba25-a481e468865a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -1770,7 +1826,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bao Shi Ju (996T5D9VH2)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1794,7 +1850,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4bff3e5d-2b4d-4685-bd48-4310e9ab2a4b";
+				PROVISIONING_PROFILE = "b819b55a-59bb-48af-ba25-a481e468865a";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1813,7 +1869,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bao Shi Ju (996T5D9VH2)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1836,7 +1892,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4bff3e5d-2b4d-4685-bd48-4310e9ab2a4b";
+				PROVISIONING_PROFILE = "b819b55a-59bb-48af-ba25-a481e468865a";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1859,6 +1915,7 @@
 				);
 				INFOPLIST_FILE = "FunTestTests/FunTestTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4bff3e5d-2b4d-4685-bd48-4310e9ab2a4b";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1877,6 +1934,7 @@
 				GCC_PREFIX_HEADER = "FunTest/FunTest-Prefix.pch";
 				INFOPLIST_FILE = "FunTestTests/FunTestTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4bff3e5d-2b4d-4685-bd48-4310e9ab2a4b";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

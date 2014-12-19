@@ -22,6 +22,9 @@
 #import "TXJumpAppStoreViewController.h"
 #import "TXMAMapViewController.h"
 #import "TXRichTextViewController.h"
+#import "TXDrawViewController.h"
+#import "TXReuseViewController.h"
+#import "TXSystemCategory.h"
 
 @interface TXViewController ()
 
@@ -413,6 +416,31 @@ void *createWaveHeader(int fileLength, short channel, int sampleRate, short bitP
 - (IBAction)handleFaceButtonClick:(id)sender {
     TXRichTextViewController *richTextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"richTextViewController"];
     [self presentViewController:richTextVC animated:YES completion:nil];
+}
+
+- (IBAction)handleDrawButtonClick:(id)sender {
+    TXDrawViewController *drawVC = [self.storyboard instantiateViewControllerWithIdentifier:@"drawViewController"];
+    [self presentViewController:drawVC animated:YES completion:nil];
+}
+
+- (IBAction)handleReuseButtonClick:(id)sender {
+    TXReuseViewController *reuseVC = [self.storyboard instantiateViewControllerWithIdentifier:@"reuseViewController"];
+    [self presentViewController:reuseVC animated:YES completion:nil];
+}
+
+- (IBAction)handleDecrytButtonClick:(id)sender {
+    NSString *testString = @"";
+    NSData *testData = [testString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *destData = [testData DecryptDataWithKey:@""];
+    char *bytes = (char *)malloc(destData.length+1);
+    [destData getBytes:bytes length:destData.length];
+    for (int i = 0; i < destData.length; i++) {
+        printf("%d,", bytes[i]);
+    }
+    printf("\n");
+    NSString *destString = [[NSString alloc] initWithData:destData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", destString);
+    free(bytes);
 }
 
 @end

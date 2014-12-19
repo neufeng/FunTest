@@ -38,6 +38,7 @@
     self.richLabel.emojiDelegate = self;
     self.richLabel.font = [UIFont systemFontOfSize:14.0];
     self.richLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.richLabel.linkAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor redColor], kCTForegroundColorAttributeName, [NSNumber numberWithInt:kCTUnderlineStyleNone], kCTUnderlineStyleAttributeName, nil];
     self.richLabel.isNeedAtAndPoundSign = YES;
     self.richLabel.customEmojiRegex = @"\\[/([0-9]{1,3})\\]";
     self.richLabel.customEmojiPlistName = @"expression2.plist";
@@ -104,6 +105,17 @@
 - (void)mlEmojiLabel:(MLEmojiLabel*)emojiLabel didSelectLink:(NSString*)link withType:(MLEmojiLabelLinkType)type
 {
     NSLog(@"link = %@, type = %d", link, type);
+//    NSLog(@"%@", emojiLabel.links);
+//    for (NSTextCheckingResult *result in emojiLabel.links) {
+//        NSLog(@"%@", result.replacementString);
+//    }
+}
+
+- (void)mlEmojiLabel:(MLEmojiLabel*)emojiLabel didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result
+{
+    NSLog(@"did link click");
+    NSUInteger index = [emojiLabel.links indexOfObject:result];
+    NSLog(@"链接索引 %d", index);
 }
 
 @end

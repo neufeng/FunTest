@@ -27,6 +27,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSString *info = @"地方层面到底有多少个领导小组和议事协调机构？群众路线教育实践活动以来，全国一次性减少13万余个。“协调机构”过多、过滥，令人瞠目的数据背后，是对“机构法定”原则淡漠。打着“协同作战”的牌子，挂着“一把手”的旗子，喊着“提高效率”的号子，“领导小组”层出不穷的现象背后，到底是无奈还是无能？在群众路线教育实践活动中，一些省区减少各类领导小组和议事协调机构“成效显著”，仅湖南减少1．3万余个，江苏、内蒙古分别减少8472个和8081个。更多";
+    self.testLabel.text = info;
+    self.testLablel2.text = @"更多";
+    
+    NSLog(@"%@", NSStringFromCGRect(self.testLabel.frame));
+    CGRect textRect = [self.testLabel textRectForBounds:self.testLabel.bounds limitedToNumberOfLines:6];
+    NSLog(@"%@", NSStringFromCGRect(textRect));
+    self.testLablel2.frame = CGRectMake(self.testLabel.frame.origin.x+self.testLabel.frame.size.width/2+5, self.testLabel.frame.origin.y+self.testLabel.frame.size.height-textRect.size.height/6-((self.testLabel.frame.size.height-textRect.size.height)/2), self.testLabel.frame.size.width/2, textRect.size.height/6);
 }
 
 - (void)didReceiveMemoryWarning

@@ -17,6 +17,17 @@
     
     [[MAMapServices sharedServices] setApiKey:@"c7b840711e662a981b93acc976976051"];
     
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+////        UIUserNotificationSettings *settings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+//        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert categories:nil];
+//        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+//    }
+//    else {
+////        UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
+//        UIRemoteNotificationType types = UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert;
+//        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:types];
+//    }
+    
     return YES;
 }
 							
@@ -45,6 +56,17 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"deviceToken %@", deviceToken);
+    //  上报服务端
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"%@", error);
 }
 
 @end

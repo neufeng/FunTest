@@ -64,6 +64,29 @@
     [super viewDidAppear:animated];
     
 //    NSLog(@"%f %f", maMapView.minZoomLevel, maMapView.maxZoomLevel);
+    
+//    CGRect heroFrame = CGRectMake(0, 300, 50, 50);
+//    UIView *heroView = [[UIView alloc] initWithFrame:heroFrame];
+//    heroView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:heroView];
+//    
+//    //  1
+//    [UIView animateWithDuration:2.0 delay:1.0 options:UIViewAnimationCurveEaseInOut animations:^{
+//        heroView.frame = CGRectMake(200, 300, 50, 50);  //英雄跑到终点
+//    } completion:^(BOOL finished) {
+//        [UIView animateWithDuration:2.0 animations:^{
+//            heroView.frame = CGRectMake(0, 300, 50, 50);    //英雄跑回起点
+//        }];
+//    }];
+//    
+//    //  2
+//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+//    animation.duration = 2.0;
+//    animation.autoreverses = YES;
+//    animation.repeatCount = HUGE_VALF;
+//    animation.fromValue = [NSNumber numberWithFloat:0]; //起点
+//    animation.toValue = [NSNumber numberWithFloat:200]; //移动距离
+//    [heroView.layer addAnimation:animation forKey:@"moveReverse"];
 }
 
 //  annotation
@@ -104,6 +127,9 @@
     NSLog(@"rect %@", MAStringFromMapRect(mapView.visibleMapRect));
     MACoordinateRegion region = mapView.region;
     NSLog(@"span (%f, %f)", region.span.latitudeDelta, region.span.longitudeDelta);
+    
+    CGPoint point = [mapView convertCoordinate:mapView.userLocation.location.coordinate toPointToView:mapView];
+    NSLog(@"我的位置 %@", NSStringFromCGPoint(point));
 }
 
 - (void)mapViewWillStartLocatingUser:(MAMapView *)mapView
