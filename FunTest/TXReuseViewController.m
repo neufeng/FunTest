@@ -43,6 +43,27 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger row = indexPath.row;
+    if (row%2) {
+        TXTableCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"TXTableCell1"];
+        if (cell == nil) {
+            NSArray *cell1Nib = [[NSBundle mainBundle] loadNibNamed:@"TXTableCell1" owner:self options:nil];
+            cell = [cell1Nib firstObject];
+            UINib *nib = [UINib nibWithNibName:@"TXTableCell1" bundle:[NSBundle mainBundle]];
+            [tableView registerNib:nib forCellReuseIdentifier:@"TXTableCell1"];
+        }
+        cell.titleLabel.text = @"Auto Layout";
+        cell.contentLabel.text = @"随着iPhone6、iPhone6 Plus的到来，使用自适应布局更是迫在眉睫的事，固定布局的老传统思想脆弱的不堪一击。现在的iPhone有4种尺寸，如果算上iPad，现在Apple的iOS设备有5种尺寸。我们在准备使用自适应布局设计应用界面之前，可以把这5种尺寸划分为3种分辨率和屏幕方向，这样在设计时分类会更加清晰一些。";
+        cell.nameLabel.text = @"Apple";
+        [cell setNeedsUpdateConstraints];
+        [cell updateConstraintsIfNeeded];
+        
+        CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        CGFloat height = size.height;
+        
+        return height+1;
+    }
+    
     return 50;
 }
 
@@ -58,6 +79,10 @@
             UINib *nib = [UINib nibWithNibName:@"TXTableCell1" bundle:[NSBundle mainBundle]];
             [tableView registerNib:nib forCellReuseIdentifier:@"TXTableCell1"];
         }
+        
+        cell.titleLabel.text = @"Auto Layout";
+        cell.contentLabel.text = @"随着iPhone6、iPhone6 Plus的到来，使用自适应布局更是迫在眉睫的事，固定布局的老传统思想脆弱的不堪一击。现在的iPhone有4种尺寸，如果算上iPad，现在Apple的iOS设备有5种尺寸。我们在准备使用自适应布局设计应用界面之前，可以把这5种尺寸划分为3种分辨率和屏幕方向，这样在设计时分类会更加清晰一些。";
+        cell.nameLabel.text = @"Apple";
         
         return cell;
     }

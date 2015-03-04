@@ -18,6 +18,7 @@
     AVAudioRecorder *wavRecorder;
     AVAudioPlayer *wavPlayer;
 }
+
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 @property (strong, nonatomic) IBOutlet UIButton *recordBtn;
 @property (strong, nonatomic) IBOutlet UIButton *playBtn;
@@ -41,6 +42,8 @@
 - (IBAction)handleBackgroundPicButtonClick:(id)sender;
 - (IBAction)handleMapButtonClick:(id)sender;
 - (IBAction)handleTipButtonClick:(id)sender;
+
+- (void)setupBackButton;
 
 // wav头部结构体
 struct wave_header {

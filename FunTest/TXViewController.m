@@ -25,6 +25,8 @@
 #import "TXDrawViewController.h"
 #import "TXReuseViewController.h"
 #import "TXSystemCategory.h"
+#import "TXAlViewController.h"
+#import "TXSocketViewController.h"
 
 @interface TXViewController ()
 
@@ -43,18 +45,57 @@
 //    maskView.maskColorRef = [[UIColor colorWithWhite:0.0 alpha:0.6] CGColor];
 //    [self.view addSubview:maskView];
     
-    CGRect frame = CGRectMake(13, 10, 38, 30);
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    backButton.frame = frame;
-    [backButton setTitle:@"返回" forState:UIControlStateNormal];
-    [backButton addTarget:self action:@selector(handleBackButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:backButton];
+////    CGRect frame = CGRectMake(13, 20, 38, 30);
+//    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+////    backButton.frame = frame;
+//    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+//    [backButton addTarget:self action:@selector(handleBackButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:backButton];
+    
+    //  1
+//    [backButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    NSMutableArray *tempConstraints = [NSMutableArray array];
+//    [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[backButton(==38)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(backButton)]];
+//    [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[backButton(==30)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(backButton)]];
+//    [self.view addConstraints:tempConstraints];
+    
+    //  2
+//    NSLayoutConstraint *topConst = [NSLayoutConstraint constraintWithItem:backButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:20];
+//    NSLayoutConstraint *leftConst = [NSLayoutConstraint constraintWithItem:backButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10];
+//    NSLayoutConstraint *widthConst = [NSLayoutConstraint constraintWithItem:backButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0/8.0 constant:0];
+//    NSLayoutConstraint *heightConst = [NSLayoutConstraint constraintWithItem:backButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.0/15.0 constant:0];
+//    [tempConstraints addObject:topConst];
+//    [tempConstraints addObject:leftConst];
+//    [tempConstraints addObject:widthConst];
+//    [tempConstraints addObject:heightConst];
+//    [self.view addConstraints:tempConstraints];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+//    NSLog(@"source %@", segue.sourceViewController);
+//    NSLog(@"dest %@", segue.destinationViewController);
+//    NSLog(@"sender %@", sender);
+}
+
+- (void)setupBackButton
+{
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(handleBackButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backButton];
+    
+    [backButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSMutableArray *tempConstraints = [NSMutableArray array];
+    [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[backButton(==38)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(backButton)]];
+    [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[backButton(==30)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(backButton)]];
+    [self.view addConstraints:tempConstraints];
 }
 
 - (void)handleBackButtonClick:(id)sender
@@ -158,7 +199,7 @@
 //    mSoundTouch.setSetting(SETTING_SEEKWINDOW_MS, 16);
 //    mSoundTouch.setSetting(SETTING_OVERLAP_MS, 8);
    
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE2 1024
     
     NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *path = [docPath stringByAppendingPathComponent:@"1.wav"];
@@ -170,8 +211,8 @@
     int numSamples = 0;
     NSMutableData *soundTouchData = [[NSMutableData alloc] init];
     do {
-        short sampleBuffer[BUFFER_SIZE];
-        numSamples = mSoundTouch.receiveSamples(sampleBuffer, BUFFER_SIZE);
+        short sampleBuffer[BUFFER_SIZE2];
+        numSamples = mSoundTouch.receiveSamples(sampleBuffer, BUFFER_SIZE2);
         [soundTouchData appendBytes:sampleBuffer length:numSamples*sizeof(short)];
     } while (numSamples > 0);
     NSMutableData *outWavData = [[NSMutableData alloc] init];
@@ -429,9 +470,10 @@ void *createWaveHeader(int fileLength, short channel, int sampleRate, short bitP
 }
 
 - (IBAction)handleDecrytButtonClick:(id)sender {
-    NSString *testString = @"";
+    NSString *testString = @"LBCg8jYCbyVTXhXjATJJzo1n8iEomQ5419+noV+9NqrMeI8PkiY54WBljIvCX8pW";
+    NSString *key = @"9gMh1lNQnE9B6nJy";
     NSData *testData = [testString dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *destData = [testData DecryptDataWithKey:@""];
+    NSData *destData = [testData DecryptDataWithKey:key];
     char *bytes = (char *)malloc(destData.length+1);
     [destData getBytes:bytes length:destData.length];
     for (int i = 0; i < destData.length; i++) {
@@ -441,6 +483,16 @@ void *createWaveHeader(int fileLength, short channel, int sampleRate, short bitP
     NSString *destString = [[NSString alloc] initWithData:destData encoding:NSUTF8StringEncoding];
     NSLog(@"%@", destString);
     free(bytes);
+}
+
+- (IBAction)handleAtButtonClick:(id)sender {
+    TXAlViewController *alVC = [self.storyboard instantiateViewControllerWithIdentifier:@"alViewController"];
+    [self presentViewController:alVC animated:YES completion:nil];
+}
+
+- (IBAction)handleChatButtonClick:(id)sender {
+    TXSocketViewController *socketVC = [self.storyboard instantiateViewControllerWithIdentifier:@"socketViewController"];
+    [self presentViewController:socketVC animated:YES completion:nil];
 }
 
 @end
